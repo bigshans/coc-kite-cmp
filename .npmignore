@@ -1,0 +1,14 @@
+src
+node_modules
+tsconfig.json
+*.map
+.tags
+.DS_Store
+webpack.config.js
+esbuild.js
+package-lock.json
+yarn.lock
+yarn-error.log
+.github
+.eslintrc.js
+.prettierrc

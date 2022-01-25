@@ -86,7 +86,9 @@ function processCompletion(document: TextDocument, c, displayPrefix = '', numDig
         ':' +
         (item === null || item === undefined
           ? undefined
-          : (item.insertText || '').slice(placeholder.begin, placeholder.end));
+          : (item.insertText || '').slice(placeholder.begin, placeholder.end)) +
+        '}' +
+        (item.insertText || '').slice(placeholder.end);
       offset += 5;
     }
     // Add closing tab stop

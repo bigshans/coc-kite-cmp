@@ -1,6 +1,6 @@
 {
   "name": "coc-kite-cmp",
-  "version": "0.0.1-rc",
+  "version": "0.0.2",
   "description": "Kite complete for coc",
   "author": "bigshans <wo199710@hotmail.com>",
   "license": "MIT",

@@ -17,7 +17,6 @@ import {
 } from 'coc.nvim';
 import { OFFSET_ENCODING, MAX_FILE_SIZE } from './constants';
 import { normalizeDriveLetter, completionsPath } from './urls';
-import * as KiteAPI from 'kite-api';
 
 function fill(s, l, f = ' ') {
   let result = s;

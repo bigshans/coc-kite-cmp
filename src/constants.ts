@@ -64,6 +64,7 @@ export const COMPILED_EXTENSIONS = (lower + lower.toUpperCase() + special).split
 export const KITE_BRANDING = '𝕜𝕚𝕥𝕖';
 export const OFFSET_ENCODING = 'utf-16';
 export const MAX_FILE_SIZE = 1024 * Math.pow(2, 10); // 1024 KB
+export const PYTHON_SUPPORTED = ['python'];
 export const SUPPORTED_LANGUAGE = [
   ['c', 'c'],
   ['cc', 'cpp'],

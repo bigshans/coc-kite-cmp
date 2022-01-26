@@ -24,6 +24,7 @@
     "semi": true
   },
   "devDependencies": {
+    "@types/node": "^17.0.12",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "coc.nvim": "^0.0.80",
@@ -32,14 +33,11 @@
     "eslint-config-alloy": "^4.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "kite-api": "^3.21.0",
+    "kite-connector": "^3.16.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.5.5",
-    "vscode-languageserver-protocol": "^3.16.0",
-    "vscode-languageserver-textdocument": "^1.0.3",
-    "axios": "^0.25.0",
-    "kite-api": "^3.21.0",
-    "kite-connector": "^3.16.0"
+    "typescript": "^4.5.5"
   },
   "activationEvents": [
     "*"

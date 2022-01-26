@@ -1,22 +1,10 @@
-import {
-  CancellationToken,
-  commands,
-  CompleteResult,
-  CompletionContext,
-  CompletionList,
-  ExtensionContext,
-  languages,
-  listManager,
-  Position,
-  sources,
-  TextDocument,
-  window,
-  workspace,
-} from 'coc.nvim';
+import { commands, ExtensionContext, languages, window, workspace } from 'coc.nvim';
 import { featureRequested } from './metrics';
 import * as KiteAPI from 'kite-api';
-import { COMPILED_EXTENSIONS, KITE_BRANDING, SUPPORTED_LANGUAGE } from './constants';
+import { COMPILED_EXTENSIONS, KITE_BRANDING, SUPPORTED_LANGUAGE, PYTHON_SUPPORTED } from './constants';
 import { KiteCompletionProvider } from './completion';
+import { KiteHoverProvider } from './docs';
+import { KiteDefinitionProvider } from './definition';
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const config = workspace.getConfiguration('coc-kite');
@@ -39,6 +27,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
     }
     return;
   }
+  subscriptions.push(languages.registerDefinitionProvider(PYTHON_SUPPORTED, new KiteDefinitionProvider()));
+  subscriptions.push(languages.registerHoverProvider(PYTHON_SUPPORTED, new KiteHoverProvider()));
   subscriptions.push(
     languages.registerCompletionItemProvider(
       'kite',

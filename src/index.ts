@@ -11,6 +11,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   if (!config.get<boolean>('enable', true)) {
     return;
   }
+  const priority = config.get<number | undefined>('priority', undefined);
   const { subscriptions } = context;
   featureRequested('staring');
   try {
@@ -35,7 +36,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
       KITE_BRANDING,
       SUPPORTED_LANGUAGE,
       new KiteCompletionProvider(),
-      COMPILED_EXTENSIONS
+      [],
+      priority
     )
   );
 }

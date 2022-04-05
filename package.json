@@ -1,6 +1,6 @@
 {
   "name": "coc-kite-cmp",
-  "version": "0.0.2-u1",
+  "version": "0.0.3",
   "description": "Kite complete for coc",
   "author": "bigshans <wo199710@hotmail.com>",
   "license": "MIT",
@@ -56,6 +56,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable snippet completions"
+        },
+        "kite.priority": {
+          "type": "number",
+          "default": 999,
+          "description": "Priority of Kite source"
         }
       }
     }
